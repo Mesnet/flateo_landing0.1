@@ -1,0 +1,85 @@
+<!-- Parallax   -->
+<div style="width: 100%; max-width:100%; overflow: hiden">
+  <div id="index-banner" class="parallax-container" style=" text-align: center; height: 550px max-width: 100%;">
+    <div class="paralax_title">
+      La clé de vos locations saisonnières
+    </div>
+    <div class="paralax_sub_title">
+      Ne vous souciez de rien, nous gérons tout !
+    </div>
+    <div class="parallax">
+      <img src="https://i.imgur.com/koPBx3f.jpg" class="img_background" alt="Background">
+    </div>
+    <br>
+     <a class="typeform-share btn cyan darken-2 waves-effect waves-light btn_estimation" href="https://flateo.typeform.com/to/kbykUK" data-mode="popup" target="_blank">Estimez vos revenus </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+  </div>
+</div>
+<!-- /Parallax   -->
+<%= render 'pages/landing/why' %>
+<%= render 'pages/landing/offer' %>
+<%= render 'pages/landing/how' %>
+<%= render 'pages/landing/services' %>
+<%= render 'pages/landing/graph' %>
+<%= render 'pages/landing/stats' %>
+<%= render 'pages/landing/trust' %>
+<%= render 'pages/landing/press' %>
+<%= render 'pages/landing/footer' %>
+
+<script>
+  $(document).ready(function () {
+    $('.parallax').parallax();
+    $('.paralax_title').hide();
+    $('.paralax_title').slideDown();
+    $('.modal').modal();
+    $('.tooltipped').tooltip();
+
+    // Link how slideToggle
+    $('.link_how').on('click', function (event) {
+      var block = $(this).next('.text_how');
+      block.slideToggle();
+      $('.text_how').not(block).slideUp();
+    });
+
+    // Slider
+    $('.slider').slick({
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      nextArrow: '<i class="material-icons arrow_slider">arrow_forward_ios</i>',
+      prevArrow: '<i class="material-icons arrow_slider">arrow_back_ios</i>',
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            infinite: true,
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+  });
+
+  // Crisp script
+  window.$crisp=[];window.CRISP_WEBSITE_ID="c30a2bcc-04c3-48ea-93b1-a84c935a9873";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+</script>

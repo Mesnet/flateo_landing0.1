@@ -1,0 +1,478 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "font-awesome";
+@import 'slick';
+
+*{ box-sizing: border-box; }
+
+body{
+  margin-top: 60px;
+  font-family: quicksand;
+  color: #575050;
+}
+
+p{
+  padding: 10px; 
+  font-size: 18px; 
+  color: #575050;
+  font-family: quicksand-light;
+}
+
+.hidded{
+  display: none;
+}
+
+.modal-header{
+  font-size: 20px;
+  font-family: quicksand-medium;
+  width: max-content;
+  margin: 25px auto;
+}
+
+.modal-content{
+  font-size: 18px;
+}
+
+.inline{
+  display: flex;
+}
+/////////////////// - NAVBAR - //////////////////
+
+.navbar{
+  width: 100%;
+  height: 60px;
+  background: #0097a7;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px 0 rgba(159, 159, 159, 0.5);
+  z-index: 999;
+  opacity: 0.95;
+  display: inline-flex;
+}
+
+.nav_logo{
+  height: 60px;
+  padding: 10px;
+  margin: auto;
+  width: max-content;
+}
+
+.nb_logo{
+  height: 40px;
+}
+
+.nav_user{
+  height: 60px;
+  width: 60px;
+  padding: 10px;
+  margin-left: 200px;
+}
+
+.nav_user.active{
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.nb_picto{
+  height: 40px;
+}
+
+.btn_contact{
+  margin: 10px;
+  color: #0097a7;
+  font-weight: bold;
+}
+
+/////////////////// - LANDING - //////////////////
+
+  ///////// - General - /////////
+
+    .container_color{
+      margin-top: 20px; 
+      background: #0097a7; 
+      width:100%; 
+      max-width:100%; 
+      color: white; 
+      text-align: center;
+    }
+
+    .block_icon{
+      width: 100px;
+    }
+
+    .block_title{
+      font-size: 25px;
+      margin: 10px;
+    }
+
+    .block_sub_title{
+      font-size: 18px;
+      font-family: quicksand-light;
+      padding-top: 10px; 
+    }
+
+    .block_text{
+      font-size: 18px;
+      font-family: quicksand-light;
+      padding: 5px;
+    }
+
+
+    .section_title{
+      margin-bottom: 50px;
+    }
+
+  ///////// - Parallax - /////////
+
+    .img_background{
+      max-width: 100%;
+    }
+
+    .paralax_title{
+      font-size: 50px;
+      line-height: 60px;
+      color: white;
+      margin-top: 130px;
+      margin-bottom: 25px;
+    }
+
+    .paralax_sub_title{
+      color: white;
+      font-size: 30px;
+      font-family: quicksand-light;
+      margin-bottom: 30px;
+    }
+
+    .btn_estimation{
+      height: 50px;
+      font-size: 20px;
+      padding-top: 7px;
+    }
+
+  ///////// - Services - /////////
+
+    .block_service_line{
+      display: inline-block;
+      width: 100%;
+    }
+
+    .block_service{
+      color: white;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    .service_icon{
+      width: 80px;
+      border: solid 2px white;
+      border-radius: 40px;
+    }
+
+    .modal_landing_services{
+      width: 400px; 
+      min-height: max-content; 
+      color: #575050;
+    }
+
+    .service_icon_modal{
+      width: 150px;
+    }
+
+    .service_title{
+      font-size: 22px;
+      opacity: 0.9;
+      margin-top: 3px;
+      text-transform: uppercase;
+      padding: 0 10px;
+    }
+
+    .service_title_modal{
+      font-size: 25px;
+      margin-top: -25px;
+      font-family: quicksand;
+    }
+
+    .service_content_modal{
+      text-align: justify;
+    }
+
+  ///////// - How it's work - /////////
+
+    .block_how{
+      padding: 0 !important;
+    }
+
+    .link_how{
+      color: #575050;
+      display: block;
+      &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+      }
+    }
+
+    .line_how{
+      height: 3px;
+      background: #0097a7;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .point_how{
+      width: 20px;
+      height: 20px;
+      background: white;
+      margin: auto;
+      margin-top: -11px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      border: solid 3px #0097a7;
+    }
+
+  ///////// - Stats - /////////
+
+    .card_box{
+      width: 100%;
+      margin: 10px;
+      background: white;
+      color: black;
+      padding: 10px;
+    }
+
+    .card_box_num{
+      font-size: 50px;
+      color: #0097a7;
+    }
+
+
+  ///////// - Card User - /////////
+
+    .user_card{
+      width: 90%;
+      margin: auto;
+    }
+
+  ///////// - Chart - /////////
+
+  .chart_img{
+    width: 60%;
+  }
+
+  .sites_logo{
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  ///////// - Press - /////////
+
+    .press_icon{
+      height: 50px;
+
+    }
+
+    .support_icon{
+      width: 30%;
+    }
+
+  ///////// - CONTACT - /////////
+
+    .sm_picto{
+      width: 50px;
+    }
+
+    .sm_btn{
+      width: max-content; 
+      display: block; 
+      margin: 10px;
+      margin-bottom: 0;
+      box-shadow: 0 2px 4px 0 rgba(159, 159, 159, 0.5);
+      height: 50px;
+      border-radius: 30px;
+      &:hover {
+        opacity: 0.7;
+        box-shadow: 0 0px 0px 0 rgba(159, 159, 159, 0.5);
+      }
+    }
+
+    .contact_num{
+      margin: 10px; 
+      width: 100%;
+    }
+
+    .contact_call{
+      padding:0 10px; 
+      margin: 5px; 
+      width: 150px;
+    }
+
+    .contact_icon{
+      color: #0097a7; 
+      margin: 10px;
+    }
+
+    .contact_line{
+      margin-bottom: 10px;
+    }
+
+  ///////// - CONTACT - /////////
+
+  .slider{
+    width: 100%;
+    display: flex;
+    min-height: 50px;
+  }
+
+  .slider_body{
+    width: 100%;
+  }
+
+  .slider_btn{
+    background: red;
+    width: 50px;
+  }
+
+  ///////// - OFFER - /////////
+
+  .offer_column{
+    background: #e0e0e0;
+    box-shadow: 0 2px 4px 0 rgba(159, 159, 159, 0.5);
+    padding-top: 5px;
+  }
+
+  .offer_column_title{
+    background: #0097a7;
+    height: auto;
+    margin: 0 -5px;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 2px 4px 0 rgba(159, 159, 159, 0.5);
+    padding: 7px 5px;
+  }
+
+  .offer_item{
+    border-bottom: solid 1px white;
+    padding: 10px;
+    padding-left: 2px;
+    height: 50px;
+  }
+
+  .offer_item.last{
+    border-bottom: solid 0px white;
+  }
+
+  .offer_item.last_item{
+    border-bottom: solid 0px white;
+    height: auto;
+  }
+
+  .offer_item_pricing{
+    font-family: quicksand-bold;
+    font-size: 30px;
+    color: #0097a7;
+  }
+
+  .offer_item.name{
+    text-align: left;
+    display: flex;
+    &:hover{
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+
+  .offer_icon_modal{
+    width: 35px;
+    margin-top: -3px;
+    margin-right: 3px;
+  }
+
+  .offer_name_modal{
+    font-size: 14px;
+    padding-top: 4px;
+    font-family: quicksand-bold;
+  }
+
+  .offer_icon{
+    font-size: 30px;
+  }
+
+  .offer_icon.check{
+    color: #26a69a;
+  }
+
+  .offer_icon.close{
+    color: #ee6e73;
+  }
+
+  ///////// - FOOTER - /////////
+
+  .footer_info_area{
+    padding: 50px;
+    padding-top: 30px;
+  }
+
+  .footer_info{
+    font-family: lato-light;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+
+  .contact_footer{
+    display: flex;
+    color: white;
+  }
+
+  .contact_icon_footer{
+    color: white; 
+    margin: 10px;
+    border: solid 2px;
+    border-radius: 20px;
+    padding: 5px;
+    font-size: 15px;
+  }
+
+  .contact_num_footer{
+    margin: 10px; 
+    width: max-content;
+    padding-top: 5px;
+  }
+
+  .contact_line_footer{
+    width: max-content;
+    margin: auto;
+  }
+
+  .sn_footer{
+    width: max-content;
+    margin: auto;
+    margin-top: 30px;
+  }
+
+  .arrow_slider{
+    font-size: 30px; 
+    display: flex; 
+    align-items: center;
+  }
+
